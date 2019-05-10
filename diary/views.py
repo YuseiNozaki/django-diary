@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, ListView, DetailView
+from django.contrib import messages
 from . import models
 
 
@@ -16,6 +17,14 @@ class Create(CreateView):
     model = models.Post
     fields = ('title', 'text')
     success_url = '/diary/list/'
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Notice : created post')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.warning(self.request, 'Notice : could not created post')
+        return super().form_invalid(form)
 
 
 class List(ListView):
