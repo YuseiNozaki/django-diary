@@ -33,5 +33,5 @@ class List(ListView):
     
 
 class Detail(DetailView):
-    tamlate_name = 'diary/post_detail.html'
+    template_name = 'diary/detail.html'
     model = models.Post
