@@ -1,9 +1,13 @@
-{% extends "diary/base.html" %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary</title>
+</head>
+<body>
+    <h1>my diary</h1>
 
-{% block body %}
-
-<h1>my diary</h1>
-
-<a href="{% url 'list' %}">post list</a>
-
-{% endblock %}
+    <a href="{% url 'list' %}">post list</a>
+</body>
+</html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, CreateView, ListView, DetailView
 from . import models
 
 
@@ -11,6 +11,13 @@ class Index(TemplateView):
         return context
 
 
+class Create(CreateView):
+    template_name = 'diary/create.html'
+    model = models.Post
+    fields = ('title', 'text')
+    success_url = '/diary/list/'
+
+
 class List(ListView):
     template_name = 'diary/list.html'
     model = models.Post
@@ -19,4 +26,3 @@ class List(ListView):
 class Detail(DetailView):
     tamlate_name = 'diary/post_detail.html'
     model = models.Post
-    
