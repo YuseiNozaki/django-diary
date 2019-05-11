@@ -1,11 +1,18 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView, ListView, DetailView, DeleteView, UpdateView
 from django.contrib import messages
 from django.urls import reverse_lazy
+from django.views.generic import (
+    TemplateView,
+    CreateView,
+    ListView,
+    DetailView,
+    DeleteView,
+    UpdateView,
+)
 from . import models
 
 
-class Index(TemplateView):
+class Top(TemplateView):
     template_name = 'diary/top.html'
 
     def get_context_data(self, **kwargs):
