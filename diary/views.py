@@ -15,10 +15,6 @@ from . import models
 class Top(TemplateView):
     template_name = 'diary/top.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
 
 class Create(CreateView):
     template_name = 'diary/form.html'

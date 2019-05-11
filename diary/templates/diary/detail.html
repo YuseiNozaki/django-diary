@@ -5,7 +5,9 @@
 <h1>{{ post.title }}</h1>
 
 <p>created date : {{ post.datetime }}</p>
-
+<br>
+<strong>text</strong>
+<br>
 <p>{{ post.text | linebreaksbr }}</p>
 
 <p><a href="{% url 'update' post.pk %}">update</a></p>
