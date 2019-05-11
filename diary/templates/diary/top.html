@@ -6,8 +6,16 @@
     <title>My Diary</title>
 </head>
 <body>
-    <h1>my diary</h1>
+    <script type="text/javascript">
+        function password(){
+            var word = prompt("Please enter password");
+            location.href = word;
+        }
+    </script>
 
-    <a href="{% url 'list' %}">post list</a>
+    <h1>My Diary</h1>
+
+    <input type="button" value="my diary" onclick="password();">
+
 </body>
 </html>
