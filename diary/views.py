@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView, ListView, DetailView
+from django.views.generic import TemplateView, CreateView, ListView, DetailView, DeleteView
 from django.contrib import messages
 from . import models
 
@@ -35,3 +35,9 @@ class List(ListView):
 class Detail(DetailView):
     template_name = 'diary/detail.html'
     model = models.Post
+
+class Delete(DeleteView):
+    template_name = 'diary/delete.html'
+    model = models.Post
+    success_url = '/diary/list/'
+    

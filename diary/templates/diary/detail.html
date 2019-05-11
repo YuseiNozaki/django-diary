@@ -8,4 +8,6 @@
 
 <p>{{ post.text }}</p>
 
+<p><a href="{% url 'delete' post.pk %}">delete this post</a></p>
+
 {% endblock %}

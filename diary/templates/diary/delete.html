@@ -1,0 +1,12 @@
+{% extends "diary/base.html" %}
+
+{% block body %}
+
+<strong><p>delete {{ post.title }} ?</p></strong>
+
+<form method='post'>
+    {% csrf_token %}
+    <button>delete</button>
+</form>
+
+{% endblock %}
